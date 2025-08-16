@@ -1,41 +1,48 @@
-import React,{ useRef } from "react";
+import { useRef } from "react";
 import { Home } from "./layout/Home";
 import { About } from "./layout/About";
 import { Project } from "./layout/Project";
 import { Skill } from "./layout/Skill";
 import { Contact } from "./layout/Contact";
-import  Navbar  from "./layout/Navbar";
+import Navbar from "./layout/Nav";
 import { Footer } from "./layout/Footer";
 
-const App =() => {
-  const about = useRef(null);
-  const project = useRef(null);
-  const skill = useRef(null);
-  const contact = useRef(null);
-  
+interface Nav{
+  section :  "about" | "project" |"skill" | "contact"
+}
 
-  const sectionScroll = (ref:any)=> {
-    console.log("sectionScroll 움직여!");
-     ref.current?.scrollIntoView({ behavior: "smooth" });
+const App = () => {
+
+  const about = useRef<HTMLDivElement>(null);
+  const project = useRef<HTMLDivElement>(null);
+  const skill = useRef<HTMLDivElement>(null);
+  const contact = useRef<HTMLDivElement>(null);
+
+  const handlerSection = (section: Nav["section"]) => {
+    switch (section) {
+      case "about":
+        about.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "project":
+        project.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "skill":
+        skill.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+      case "contact":
+        contact.current?.scrollIntoView({ behavior: "smooth" });
+        break;
+    }
   }
-
 
   return (
     <>
-      <Navbar sectionAboutt={function (): void {
-        throw new Error("Function not implemented.");
-      } } sectionProject={function (): void {
-        throw new Error("Function not implemented.");
-      } } sectionSkill={function (): void {
-        throw new Error("Function not implemented.");
-      } } sectionContact={function (): void {
-        throw new Error("Function not implemented.");
-      } } />
+      <Navbar handlerSection = {handlerSection}/>
       <Home />
-      <About menuRef = {about}/>
-      <Project menuRef = {project}/>
-      <Skill menuRef = {skill}/>
-      <Contact menuRef = {contact} />
+      <div ref={about}><About /></div>
+      <div ref={project}><Project /></div>
+      <div ref={skill}><Skill /></div>
+      <div ref={contact}><Contact /></div>
       <Footer />
     </>
   )

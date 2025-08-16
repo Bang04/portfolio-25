@@ -49,8 +49,8 @@ export const SkillTag = ({name}: Tag) => {
         <div className="flex flex-wrap gap-2">
         {
             skills.filter(skill => skill.name === name)
-            .map(skill => (
-                <div className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium `+skill.color}>
+            .map((skill, i) => (
+                <div key={i} className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium `+skill.color}>
                        {skill.badge && <img src={skill.badge} className="w-4 h-4" />}
                        <span>{skill.name}</span>
                 </div>
