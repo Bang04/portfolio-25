@@ -1,104 +1,87 @@
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import crowdweb from "../assets/images/project/Crowdfunding-web.png";
 import enterweb from "../assets/images/project/Enterainment-web.png";
 import cartweb from "../assets/images/project/ListWithCart-web.png";
 import sunnysweb from "../assets/images/project/Sunnyside-web.png";
 
+const projects = [
+    { image: crowdweb , description: "첫 번째 프로젝트" },
+    { image: enterweb, description: "두 번째 프로젝트" },
+    { image: cartweb, description: "세 번째 프로젝트" },
+    { image: sunnysweb, description: "네 번째 프로젝트" },
+  ];
 
 export const Project = () => {
 
     const ref = useRef(null);
+    const [hovered, setHovered] = useState(false);
+     
     const isInView = useInView(ref, { once: true, margin: "-100px" });
     const controls = useAnimation();
 
     useEffect(() => {
         if (isInView) {
-        controls.start("visible");
+            controls.start("visible");
         }
     }, [isInView, controls]);
-  
 
-     const transition = {
-       
+
+    const transition = {
+
     };
-                
+
     return (
-        <div>
-           <motion.div
-                className="md:min-h-150 bg-[#f9eee2]" >
-                <div className="text-lg font-semibold text-center">📦Project</div>
-                <div className="flex flex-row flex-wrap m-auto min-w-3xs max-w-5xl">
-                        <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                    type: "spring", 
-                                    stiffness: 300,
-                                    duration: 0.8,
-                                   // delay: 1,   
-                                    ease: [0.68, -0.55, 0.68, 1.55], // back easing (튕김 느낌)
-                                }}
-                            viewport={{ once: true, amount: 0.4 }}
-                            whileHover={{ scale: 1.1, rotate: 3 }}
-                            className="w-full h-60 overflow-hidden shadow-sm rounded-3xl">
-                            <img className="w-full h-full  object-cover  object-top " src={crowdweb} />
-                        </motion.div>
-                        <motion.div 
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                    type: "spring", 
-                                    stiffness: 300,
-                                    duration: 0.8,
-                                    ease: [0.68, -0.55, 0.68, 1.55], // back easing (튕김 느낌)
-                                }}
-                            viewport={{ once: true, amount: 0.4 }}
-                            whileHover={{ scale: 1.1, 
-                                        rotate: 3, 
-                                        transition: {
-                                            duration: 0.1,
-                                            type: "tween", // 👈 hover는 별도 트랜지션 줘야 확실하게 작동
-                                          }, 
-                                        }}
-                            className="w-full h-60 overflow-hidden shadow-sm rounded-3xl">
-                            <img src={cartweb} />
-                        </motion.div>
+        <>
+          <div className="text-lg font-semibold text-center">📦Project</div>
+          <div className="flex flex-col">
+            
+        {
+            projects.map((project, i:number) => {
+                return(       
+                <div
+                    key={i}
+                    className="flex w-5/6 m-auto h-64 overflow-hidden rounded-2xl shadow-lg"
+                    onMouseEnter={() => setHovered(true)}
+                    onMouseLeave={() => setHovered(false)}
+            >
+                {/* 이미지 영역 */}
+                <motion.div
+                    animate={{ width: hovered ? "50%" : "100%" }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="h-full"
+                >
+                    <img
+                    src={project.image} 
+                    alt="example"
+                    className="w-full h-full object-top object-cover"
+                    />
+                </motion.div>
 
-                        <motion.div  
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                    type: "spring", 
-                                    stiffness: 300,
-                                    duration: 0.8,
-                                    //delay: 2,   
-                                    ease: [0.68, -0.55, 0.68, 1.55], // back easing (튕김 느낌)
-                                }}
-                            viewport={{ once: true, amount: 0.4 }}
-                            whileHover={{ scale: 1.1, rotate: 3 }}
-                            className="w-full h-60 overflow-hidden shadow-sm rounded-3xl">
-                           <img src={enterweb} />
-                       </motion.div>
+                {/* 설명 영역 */}
+                <motion.div
+                    animate={{ width: hovered ? "50%" : "0%" }}
+                    transition={{ duration: 0.5, ease: "easeInOut" }}
+                    className="overflow-hidden flex items-center justify-center bg-white"
+                >
+                    <motion.p
+                    animate={{ opacity: hovered ? 1 : 0 }}
+                    transition={{ duration: 0.3, delay: hovered ? 0.2 : 0 }}
+                    className="p-6 text-gray-700"
+                    >
+                   핵심 기능 / 역할:
+                    - 프로젝트 카드 hover 시 이미지 축소 및 설명 표시 애니메이션 구현
+                    - 반응형 디자인 적용 및 TailwindCSS로 레이아웃 구성
+                    - React 컴포넌트 재사용성을 고려한 구조 설계
 
-                         <motion.div
-                            initial={{ opacity: 0, y: 100 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{
-                                    type: "spring", 
-                                    stiffness: 300,
-                                    duration: 0.8,
-                                    ease: [0.68, -0.55, 0.68, 1.55], // back easing (튕김 느낌)
-                                }}
-                            viewport={{ once: true, amount: 0.4 }}
-                            whileHover={{ scale: 1.1, rotate: 3 }}
-                            className="w-full h-60 overflow-hidden shadow-sm rounded-3xl">
-                            <img src={sunnysweb} />
-                       </motion.div>
-                </div>
-
-            </motion.div>
-        </div>
+                    </motion.p>
+                </motion.div>
+            </div>
+        ) })
+        }
+      
+          </div>    
+    </>
     );
 };
