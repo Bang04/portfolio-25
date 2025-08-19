@@ -1,16 +1,16 @@
 import { motion } from "framer-motion";
 
-export const Line = ({delay = 0}) => {
-    return(
-       
-            <div 
-             className="text-center text-white bg-[#31302f]"
-             style={{ 
-      overflow: "hidden", 
-      whiteSpace: "nowrap"
-    }}>
+export const Line = ({ delay = 0 }) => {
+  return (
+
+    <div
+      className="text-center text-white bg-[#31302f]"
+      style={{
+        overflow: "hidden",
+        whiteSpace: "nowrap"
+      }}>
       <motion.div
-     
+
         animate={{ x: ["100%", "-100%"] }}
         transition={{
           x: {
@@ -18,7 +18,7 @@ export const Line = ({delay = 0}) => {
             repeatType: "loop",
             duration: 10,
             ease: "linear",
-             delay,
+            delay,
           },
         }}
         style={{ display: "inline-block", paddingRight: "100%" }}
@@ -28,5 +28,5 @@ export const Line = ({delay = 0}) => {
         </span>
       </motion.div>
     </div>
-    )
+  )
 }

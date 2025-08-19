@@ -10,7 +10,6 @@ const config: Config = {
         gravitasOne: ['Gravitas One', 'cursive'],
         outfit: ['Outfit', 'sans-serif'],
       },
-      
     },
   },
   plugins: [],

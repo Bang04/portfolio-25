@@ -7,7 +7,7 @@ import cartweb from "../assets/images/project/ListWithCart-web.png";
 import sunnysweb from "../assets/images/project/Sunnyside-web.png";
 
 
-export const Project = ({menuRef}:any) => {
+export const Project = () => {
 
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-100px" });
@@ -25,7 +25,7 @@ export const Project = ({menuRef}:any) => {
     };
                 
     return (
-        <div ref={menuRef} >
+        <div>
            <motion.div
                 className="md:min-h-150 bg-[#f9eee2]" >
                 <div className="text-lg font-semibold text-center">📦Project</div>

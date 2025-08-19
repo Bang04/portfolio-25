@@ -2,9 +2,9 @@ import { SkillTag } from "../components/SkillTag";
 import sunnysweb from "../assets/images/project/Sunnyside-web.png";
 
 
-export const About = ({ menuRef }: any) => {
+export const About = () => {
     return (
-        <div ref={menuRef} className="flex flex-col items-center mx-5">
+        <div className="flex flex-col items-center mx-5">
             <div className="text-lg font-semibold text-center">About me</div>
 
             <div className="flex flex-col w-full items-center">
@@ -56,14 +56,17 @@ export const About = ({ menuRef }: any) => {
                             <div className="flex flex-col gap-y-1 m-3">
                                 <div className="font-bold">QR Scann Andorid APP</div>
                                 <div className="text-sm text-gray-400">2022.12~2023.04</div>
-                                <div className="text-gray-600">태양광 모듈의 각 QR코드를 스캔해서 등록하여 유지관리하는 App </div>
+                                <div className="text-sm text-gray-600">태양광 모듈의 각 QR코드를 스캔해서 등록하여 유지관리하는 App </div>
                                 <div className="flex flex-wrap gap-x-1">
-                                    <div className="m-1 p-2 text-sm font-bold border border-gray-400 rounded-xl">html</div>
-                                    <div className="m-1 p-2 text-sm font-bold border border-gray-400 rounded-xl">Css3</div>
-                                    <div className="m-1 p-2 text-sm font-bold border border-gray-400 rounded-xl">JavaScript</div>
-                                    <div className="m-1 p-2 text-sm font-bold border border-gray-400 rounded-xl">Ajax</div>
-                                    <div className="m-1 p-2 text-sm font-bold border border-gray-400 rounded-xl">Jquery</div>
-                                    <div className="m-1 p-2 text-sm font-bold border border-gray-400 rounded-xl">PHP</div>
+                                    <SkillTag name={"HTML"} />
+                                    <SkillTag name={"CSS3"} />
+                                    <SkillTag name={"JavaScript"} />
+                                    <SkillTag name={"Ajax"} />
+                                    <SkillTag name={"jQuery"} />
+                                    <SkillTag name={"PHP"} />
+                                    <SkillTag name={"Tailwind"} />
+                                    <SkillTag name={"TypeScript"} />
+                                    <SkillTag name={"React"} />
 
 
                                 </div>
@@ -101,7 +104,7 @@ export const About = ({ menuRef }: any) => {
                                 <div>QR Scann Andorid APP</div>
                                 <div>2022.12~2023.04</div>
                                 <div>태양광 모듈의 각 QR코드를 스캔해서 등록하여 유지관리하는 App </div>
-                                <div className="flex flex-wrap gap-x-1">
+                                <div className="flex flex-wrap gap-1">
                                     <SkillTag name={"HTML"} />
                                     <SkillTag name={"CSS3"} />
                                     <SkillTag name={"JavaScript"} />
