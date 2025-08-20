@@ -1,15 +1,15 @@
 import { SkillTag } from "../components/SkillTag";
 export const Skill = () => {
     return (
-        <div className="min-h-100  bg-[#ff8470]">
+        <div className="flex flex-col items-center min-h-100  bg-[#ffece9]">
             <div className="text-lg font-semibold text-center">🛠️ Skills</div>
 
-            <div className="flex flex-col gap-4 items-center w-80">
-                <div className="w-full flex flex-col md:flex-row">
-                    <div className="flex items-center py-3">
-                        <div className="text-white  whitespace-nowrap"> Front-end</div>
+            <div className="grid grid-cols-2 gap-4 sm:min-w-xs max-w-md">
+                <div className="col-span-2 flex  flex-col w-full p-5 border border-red-600 rounded-md">
+                    <div className="flex items-center pb-4">
+                        <div className="text-red-600  whitespace-nowrap">🖥️ Front-end</div>
                     </div>
-                    <div className="flex flex-wrap  gap-2">
+                    <div className="flex flex-wrap max-w-lg gap-2">
                         {/* Markup & Style: */}
                         <SkillTag name={"HTML"} />
                         <SkillTag name={"CSS"} />
@@ -34,18 +34,18 @@ export const Skill = () => {
                        
                     </div>
                 </div>
-                <div className="w-full flex flex-col md:flex-row">
-                    <div className="flex items-center py-3">
-                        <div className="text-white  whitespace-nowrap"> Back-end</div>
+                <div className="flex flex-col p-5  w-full  border border-red-600 rounded-md">
+                     <div className="flex items-center pb-4">
+                        <div className="text-red-600  whitespace-nowrap"> ⚙️ Back-end</div>
                     </div>
                     <div className="flex flex-wrap  gap-2">
                         <SkillTag name={"PHP"} />
                         <SkillTag name={"MySQL"} />
                     </div>
                 </div>
-                <div className="w-full flex flex-col md:flex-row">
-                    <div className="flex items-center py-3">
-                        <div className="text-white  whitespace-nowrap">Education</div>
+               <div className="flex flex-col p-5  w-full border border-red-600 rounded-md">
+                    <div className="flex items-center pb-4">
+                        <div className="text-red-600  whitespace-nowrap">📚 Education</div>
                     </div>
                     <div className="flex flex-wrap  gap-2">
                         <SkillTag name={"Java"} />
@@ -53,10 +53,9 @@ export const Skill = () => {
                         <SkillTag name={"Oracle"} />
                     </div>
                 </div>
-
-                <div className="w-full flex flex-col md:flex-row">
-                    <div className="flex items-center py-3">
-                        <div className="text-white  whitespace-nowrap">Version & Tool</div>
+                <div className="flex flex-col p-5  w-full border border-red-600 rounded-md">
+                     <div className="flex items-center pb-4">
+                        <div className="text-red-600  whitespace-nowrap">🛠️Version & Tool</div>
                     </div>
                     <div className="flex flex-wrap  gap-2">
                         <SkillTag name={"Npm"} />
