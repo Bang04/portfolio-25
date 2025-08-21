@@ -30,16 +30,19 @@ export const Contact = () => {
     };
 
     return (
-        <div className="min-h-100 bg-[#8490c8]">
+        <div className="w-full min-h-100 bg-[#8490c8]">
              <div className="text-lg font-semibold text-center">Contact</div>
 
             <form ref={form} onSubmit={sendEmail}>
-                <div className='flex flex-col items-center justify-center gap-y-6 '>
+                <div className="flex justify-center ">
+                <div className='flex flex-col items-center max-w-xl boarder border-red-200 shadow-lg rounded-md gap-y-6 '>
                     <input type="text" name="name" className='w-3/4 text-gray-500 bg-gray-50 rounded-md p-2' placeholder='user name' required/>
                     <input type="email" name="email"  className='w-3/4 text-gray-500 bg-gray-50 rounded-md p-2' placeholder='your email' required/>
                     <textarea name="message"  className='w-3/4 text-gray-500 bg-gray-50 rounded-md p-2' placeholder='message'/>
                     <input type="submit" value="Send"  className='text-white bg-black  px-5 py-1 rounded-md'/>
                 </div>
+                </div>
+               
             </form>
         </div>
     );
