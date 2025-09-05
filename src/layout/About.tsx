@@ -130,7 +130,7 @@ export const About = () => {
 
                                     {/* 설명 영역 */}
                                     <motion.div
-                                        animate={{ width: hovered[i] ? "100%" : "0%" , height:  hovered[i] ?" 350px" : "0px"  }}
+                                        animate={{ width: hovered[i] ? "100%" : "0%" , height:  hovered[i] ?"auto" : "0px"  }}
                                         transition={{ duration: 0.5, ease: "easeInOut" }}
                                         className=" flex justify-center bg-white rounded-2xl"
                                     >
