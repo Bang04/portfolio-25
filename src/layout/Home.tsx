@@ -3,7 +3,7 @@ import cat from "../assets/images/cutecat.png";
 import stiker from "../assets/images/sticker.png";
 export const Home = () => {
     return (
-        <div className="font-sans bg-white text-gray-900 min-w-sm w-full h-full">
+        <div className="font-sans bg-white text-gray-900 min-w-xs w-full h-full">
             <div className="">
                 <motion.div
                     animate={{ backgroundColor: "##fcb04c", borderRadius: "15%" }}
