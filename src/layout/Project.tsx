@@ -7,27 +7,24 @@ import { Slide } from "../components/Slide";
 
 
 import crowdweb from "../assets/images/project/Crowdfunding-web.png";
+import crowdapp from "../assets/images/project/Crowdfunding-app.png";
+
 import enterweb from "../assets/images/project/Enterainment-web.png";
+import enterApp from "../assets/images/project/Enterainment-app.png";
+
 import cartApp from "../assets/images/project/CartApp.png";
 import cartTablet from "../assets/images/project/LlistWithCart-tablet.png";
 import cartWeb from "../assets/images/project/LlistWithCart-web.png";
 
 import sunnysweb from "../assets/images/project/Sunnyside-web.png";
-
-// const projects = [
-
-//     { web: enterweb, description: "두 번째 프로젝트" },
-//     { app: cartApp, tablet: cartTablet, web: cartWeb, description: "첫 번째 프로젝트" },
-//     { web: crowdweb, description: "세 번째 프로젝트" },
-//     { web: sunnysweb, description: "네 번째 프로젝트" },
-// ];
-
+import { Show } from "../components/FanCard";
 
 const projects = [
   {
     name: "Enter Web",
     images: {
       web: enterweb,
+      mobile: enterApp,
     },
   },
   {
@@ -42,6 +39,7 @@ const projects = [
     name: "Crowd Web",
     images: {
       web: crowdweb,
+      mobile: crowdapp,
     },
   },
   {
@@ -64,21 +62,25 @@ export const Project = () => {
 
             return (
               <div className="flex flex-col md:flex-row w-full rounded-xl shadow-lg">
+             
+                <Show images={Object.values(project.images)} />
+             
+                <div className="flex md:w-2/5 flex-col m-5">
+                  <div className="text-xl font-bold text-gray-800">솔라리버 태양광 모니터링 Web& QR Scanner APP​​​ </div>
+                  <div className="text-sm text-gray-500">2022-08-01 ~ 2023-04-01</div>
+                  <div className="text-base text-gray-700 mt-2">태양광 모듈의 각 QR코드를 스캔해서 등록하여 유지관리하는 App</div>
+                  <div>
+                    <div className="text-base font-semibold text-gray-800 mt-4">역할 / 기능</div>
+                    <div className="text-sm text-gray-500">
+                      <ul className="list-disc list-inside text-sm text-gray-600 space-y-1 mt-2">
+                        <li>web, app 기획, 설계, 개발, 빌드, 배포 경험</li>
+                        <li>1. AmChart 를 이용한 데이터 시각봐</li>
+                        <li>2. QR 스캐너 라이브러리를 이용한 하이브리드 앱 개발 ​</li>
+                        <li>3. Android App 배포 경험</li>
 
-                <Slide images={Object.values(project.images)} />
-
-                {/* <div className="flex  md:w-3/5  h-100 rounded-xl  hover:overflow-y-visible  hover:scale-110 hover:transform-gpu ">  overflow-hidden */}
-                {/* <img className="w-full h-full object-cover  object-top  rounded-xl block md:hidden "  /> */}
-                {/* <img className="w-full h-full object-cover  object-top  rounded-xl hidden md:block lg:hidden " /> */}
-                {/* <img className="w-full h-full object-cover  object-top  rounded-xl hidden lg:block"  /> */}
-
-                {/* </div> */}
-                <div className="flex md:w-2/5 flex-col ">
-                  <div className="flex flex-col gap-y-1 m-3">
-                    <div>QR Scann Andorid APP</div>
-                    <div>2022.12~2023.04</div>
-                    <div>태양광 모듈의 각 QR코드를 스캔해서 등록하여 유지관리하는 App </div>
-                    <div className="flex flex-wrap gap-1">
+                      </ul>
+                    </div>
+                    <div className="flex flex-wrap gap-1 mt-4">
                       <SkillTag name={"HTML"} />
                       <SkillTag name={"CSS3"} />
                       <SkillTag name={"JavaScript"} />
