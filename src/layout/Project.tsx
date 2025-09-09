@@ -2,8 +2,6 @@ import { motion, AnimatePresence, useAnimation, useInView, usePresenceData, wrap
 import { useEffect, useRef, useState } from "react";
 import { SkillTag } from "../components/SkillTag";
 
-import { Slide } from "../components/Slide";
-
 
 
 import crowdweb from "../assets/images/project/Crowdfunding-web.png";
@@ -17,7 +15,7 @@ import cartTablet from "../assets/images/project/LlistWithCart-tablet.png";
 import cartWeb from "../assets/images/project/LlistWithCart-web.png";
 
 import sunnysweb from "../assets/images/project/Sunnyside-web.png";
-import { Show } from "../components/FanCard";
+import { FanCard } from "../components/FanCard";
 
 const projects = [
   {
@@ -30,9 +28,13 @@ const projects = [
   {
     name: "Cart App",
     images: {
-      web: cartApp,
+     
+
       tablet: cartTablet,
+
       mobile: cartWeb,
+
+       web: cartApp,
     },
   },
   {
@@ -61,9 +63,9 @@ export const Project = () => {
           projects.map((project, i: number) => {
 
             return (
-              <div className="flex flex-col md:flex-row w-full rounded-xl shadow-lg">
+              <div className="flex flex-col md:flex-row  justify-between w-full rounded-xl shadow-lg">
              
-                <Show images={Object.values(project.images)} />
+                <FanCard images={Object.values(project.images)} />
              
                 <div className="flex md:w-2/5 flex-col m-5">
                   <div className="text-xl font-bold text-gray-800">솔라리버 태양광 모니터링 Web& QR Scanner APP​​​ </div>

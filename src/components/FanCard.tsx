@@ -18,7 +18,7 @@ export const FanCard = ({ images }: SlideProps) => {
     return (
         <div className="flex md:w-3/5">
             <AnimatePresence initial={false}>
-                <div ref={ref} className="flex justify-center w-full">
+                <div ref={ref} className="flex justify-center items-center w-full">
                     {images && images.map((src, idx) => {
 
                         let rotate = 0;
@@ -29,7 +29,8 @@ export const FanCard = ({ images }: SlideProps) => {
                             xOffset = idx === 0 ? -10 : 10;
                         } else if (count === 3) {
                             rotate = idx === 0 ? -15 : idx === 1 ? 0 : 15;
-                            xOffset = idx === 0 ? -10 : idx === 1 ? 0 : 10;
+                           xOffset = idx === 0 ? 20 : idx === 1 ? 0 : -20;
+                            
                         }
 
 
@@ -45,7 +46,7 @@ export const FanCard = ({ images }: SlideProps) => {
                                 }
                                 transition={{ type: "spring", stiffness: 200, damping: 20, delay: idx * 0.1 }}
                                 whileHover={{ scale: 1.1 }}
-                                className="min-w-40 h-80 object-cover object-top rounded-xl"
+                                className="max-w-60 min-w-20 h-80 object-cover object-top rounded-xl"
                             />
                         )
                     })}

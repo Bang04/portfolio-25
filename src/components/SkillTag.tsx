@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import css3 from "../assets/images/icon/css3_badge.png";
 import html5 from "../assets/images/icon/html5_badge.png";
 import react from "../assets/images/icon/react_badge.png";
@@ -59,10 +60,12 @@ export const SkillTag = ({name}: Tag) => {
         {
             skills.filter(skill => skill.name === name)
             .map((skill, i) => (
-                <div key={i} className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium `+skill.color}>
-                       {skill.badge && <img src={skill.badge} className="w-4 h-4" />}
-                       <span className="">{skill.name}</span>
-                </div>
+                <motion.div>
+                    <div key={i} className={`flex items-center gap-1 px-3 py-1 rounded-full text-sm font-medium `+skill.color}>
+                        {skill.badge && <img src={skill.badge} className="w-4 h-4" />}
+                        <span className="">{skill.name}</span>
+                    </div>
+                </motion.div>
             ))
         }
         </div>
