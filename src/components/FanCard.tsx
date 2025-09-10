@@ -7,11 +7,6 @@ type SlideProps = {
 }
 export const FanCard = ({ images }: SlideProps) => {
 
-    const [isMobile, setIsMobile] = useState(false);
-    const [isTablet, setTablet] = useState(false);
-    const [isWeb, seWeb] = useState(false);
-
-    const [isVisible, setIsVisible] = useState([true, false, false]);
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-50px" });
 
