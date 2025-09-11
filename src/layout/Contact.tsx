@@ -103,8 +103,11 @@ export const Contact = () => {
   };
 
   return (
-    <div className="max-w-3xl mx-auto p-6">
-      <div className="bg-gradient-to-br from-white/60 to-slate-50/60 backdrop-blur-md border border-slate-200/60 rounded-2xl shadow-lg p-6 md:p-10">
+    <div className='bg-blue-100 py-16'>
+       <div className="w-4/5 mx-auto p-3 text-lg text-left font-bold">✉️ Contact</div>
+     
+      <div className="flex flex-wrap max-w-4/5 m-auto gap-y-15">
+      <div className="w-full bg-gradient-to-br from-white/60 to-slate-50/60 backdrop-blur-md border border-slate-200/60 rounded-2xl shadow-lg p-6 md:p-10">
         <h2 id="contact-heading" className="text-2xl md:text-3xl font-semibold mb-2">
           Contact Me
         </h2>
@@ -117,7 +120,7 @@ export const Contact = () => {
               <input
                 name="name"
                 placeholder="홍길동"
-                className="mt-2 p-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+                className="mt-2 p-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition bg-white"
                 aria-required
                 value={name}
                 onChange={(e) => handleInputChange(e, "name", 20)}
@@ -129,7 +132,7 @@ export const Contact = () => {
               <input
                 name="email"
                 placeholder="email@example.com"
-                className="mt-2 p-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+                className="mt-2 p-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition bg-white"
                 aria-required
                 type="email"
                 value={email}
@@ -143,7 +146,7 @@ export const Contact = () => {
             <input
               name="subject"
               placeholder="프로젝트 문의 / 협업 제안"
-              className="mt-2 p-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition"
+              className="mt-2 p-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition bg-white"
               value={subject}
                onChange={(e) => handleInputChange(e, "subject",50)}
 
@@ -156,7 +159,7 @@ export const Contact = () => {
               name="message"
               placeholder="안녕하세요.(최대 200자)"
               rows={6}
-              className="mt-2 p-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition resize-none"
+              className="mt-2 p-3 rounded-lg border border-slate-200 focus:outline-none focus:ring-2 focus:ring-indigo-400 transition resize-none bg-white"
               aria-required
               onChange={(e) => handleInputChange(e, "message",200)}
             />
@@ -166,7 +169,7 @@ export const Contact = () => {
           {status && (
             <div
               role="status"
-              className={`p-3 rounded-md text-sm ${status.ok ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"}`}
+              className={`p-3 rounded-md text-sm font-semibold ${status.ok ? "bg-green-50 text-green-800" : "bg-red-50 text-red-800"}`}
             >
               {status.msg}
             </div>
@@ -199,5 +202,7 @@ export const Contact = () => {
         </form>
       </div>
     </div>
+  </div>
+   
   );
 };

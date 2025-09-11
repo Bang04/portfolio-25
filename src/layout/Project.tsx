@@ -1,19 +1,16 @@
-import { motion, AnimatePresence, useAnimation, useInView, usePresenceData, wrap } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
 import { SkillTag } from "../components/SkillTag";
 import { FanCard } from "../components/FanCard";
-import projects from "../data/project";
+import projects from "../data/portfolioProjects";
 
 export const Project = () => {
   return (
-    <div className="flex flex-col items-center w-full ">
-      <div className="text-lg font-semibold text-center mb-15">📦Project</div>
+    <div className="flex flex-col items-center bg-green-100 py-16">
+      <div className="w-4/5 mx-auto p-3 text-lg text-left font-bold">📦Project</div>
       <div className="flex flex-wrap max-w-4/5 gap-y-15">
-
         {
           projects.map((project, i: number) => {
             return (
-              <div className="flex flex-col md:flex-row  justify-between w-full rounded-xl shadow-lg">
+              <div className="flex flex-col md:flex-row  justify-between w-full rounded-xl shadow-lg bg-white">
              
                 <FanCard images={Object.values(project.images)} />
              
