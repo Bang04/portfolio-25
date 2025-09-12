@@ -8,7 +8,7 @@ export const Project = () => {
       <div className="w-4/5 mx-auto p-3 text-lg text-left font-bold">📦Project</div>
       <div className="flex flex-wrap max-w-4/5 gap-y-15">
         {
-          projects.map((project, i: number) => {
+          projects.map((project) => {
             return (
               <div className="flex flex-col md:flex-row  justify-between w-full rounded-xl shadow-lg bg-white">
              

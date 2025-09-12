@@ -1,12 +1,12 @@
 "use client"
 import { AnimatePresence, motion, useInView } from "framer-motion";
-import { useState, useRef } from "react"
+import { useRef } from "react"
 
 type SlideProps = {
     images: string[];
 }
-export const FanCard = ({ images }: SlideProps) => {
 
+export const FanCard = ({ images }: SlideProps) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-50px" });
 
@@ -15,7 +15,6 @@ export const FanCard = ({ images }: SlideProps) => {
             <AnimatePresence initial={false}>
                 <div ref={ref} className="flex justify-center items-center w-full">
                     {images && images.map((src, idx) => {
-
                         let rotate = 0;
                         let xOffset = 0;
                         const count = images.length;
@@ -27,8 +26,6 @@ export const FanCard = ({ images }: SlideProps) => {
                            xOffset = idx === 0 ? 20 : idx === 1 ? 0 : -20;
                             
                         }
-
-
                         return (
                             <motion.img
                                 key={src + idx}

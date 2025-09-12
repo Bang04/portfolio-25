@@ -53,7 +53,7 @@ export const Contact = () => {
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    if (name.length === 0 || name.length < 10 || name.length > 200) {
+    if (name.length === 0 || name.length < 3 || name.length > 200) {
       setStatus({ ok: false, msg: "이름은 5자 이상 입력해주세요 " });
       return;
     }
