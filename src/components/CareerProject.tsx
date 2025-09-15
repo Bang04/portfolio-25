@@ -1,8 +1,9 @@
-import { motion } from "framer-motion";
 
-import { SkillTag } from "../components/SkillTag";
-import careerProjects from "../data/careerProjects";
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { SkillTag } from "../components/SkillTag";
+import { ImageSlide } from "./ImageSlide";
+import careerProjects from "../data/careerProjects";
 
 export const CareerProject = () => {
     const [hovered, setHovered] = useState<boolean[]>(()=> careerProjects.map(()=> false));
@@ -21,41 +22,44 @@ export const CareerProject = () => {
                                     return newHover
                                 })
                             }
-                            onMouseLeave={() => setHovered(prev => {
-                                    const newHover = [...prev];
-                                    newHover[i] = false;
-                                    return newHover
-                                })
-                            }
+                            // onMouseLeave={() => setHovered(prev => {
+                            //         const newHover = [...prev];
+                            //         newHover[i] = false;                 
+                            //         return newHover
+                            //     })
+                            // }
                             initial={{ opacity: 0, y: 0 }}
                             animate={{ opacity: 1, y: 0 }}  // 스크롤 들어올 때만 애니메이션 실행
                             transition={{ duration: 0.6, ease: "easeOut" }}
-                            className="relative flex flex-col md:flex-row w-5/6 m-auto rounded-2xl shadow-lg  bg-white"
+                            className="relative flex flex-col md:flex-row w-5/6 m-auto rounded-2xl shadow-lg bg-white"
                         >
                             {/* 이미지 영역 */}
-                            <motion.div
-                                animate={{ width:  "100%" }}
+
+                            <ImageSlide />
+                            {/* <motion.div
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                                className="flex items-center w-full h-auto scroll-smooth rounded-2xl"
+                                className="flex items-center w-full scroll-smooth rounded-2xl"
                             >
                                 <img
                                     src={project.image}
                                     alt="example"
                                     className="w-full object-top object-cover  rounded-2xl"
                                 />
-                            </motion.div>
+                            </motion.div> */}
 
                             {/* 설명 영역 */}
                             <motion.div
-                                animate={{ width: hovered[i] ? "100%" : "0%" , height:  hovered[i] ?"auto" : "0px"  }}
+                                initial={{ opacity: 0 }}
+                                style={{ height :  hovered[i]? "auto" :"0px"  }}
+                                animate={{ opacity: hovered[i] ? 1 : 0  , flexBasis: hovered[i] ? "100%" : "0%" }}
                                 transition={{ duration: 0.5, ease: "easeInOut" }}
-                                className=" flex justify-center bg-white rounded-2xl"
+                                className=" flex justify-center bg-white rounded-2xl overflow-hidden overflow-y-scroll"
                             >
                                 {/* /items-center  */}
                                 <motion.div
                                     animate={{ opacity: hovered[i] ? 1 : 0 }}
                                     transition={{ duration: 0.3, delay: hovered[i] ? 0.2 : 0 }}
-                                    className="p-6 text-gray-700 "
+                                    className="px-6 py-2 text-gray-700 "
                                 >
                                     <div className="text-xl font-bold text-gray-800">{project.title}</div>
                                     <div className="text-sm text-gray-500"><b className="mr-2">web</b>{project.periods.web}</div>
@@ -78,6 +82,8 @@ export const CareerProject = () => {
                                     </div>
                                 </motion.div>
                             </motion.div>
+
+                            
                         </motion.div>
                     )})
                 }   

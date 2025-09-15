@@ -1,5 +1,7 @@
 
 import solMain from "../assets/images/solariver/w_main.png";
+import nremsLogin from "../assets/images/nrems/m_login.png";
+
 export const careerProjects = [
   {
     title: "솔라리버 태양광 모니터링 Web & 솔라리버 QR Scanner App (Hybrid APP)",
@@ -23,7 +25,7 @@ export const careerProjects = [
       web: "2022.01 ~ 2022.03 (약 3개월)",
       app: "2022.03 ~ 2022.06 (약 3개월)"
     },
-    image: solMain,
+    image: nremsLogin,
     role: "기본 기능 버그 수정 및 인터페이스 기능 개선 (50%)",
     techStack: [
       "HTML", "CSS",  "JavaScript", "Ajax", "jQuery", "PHP","MySQL", "Android"
