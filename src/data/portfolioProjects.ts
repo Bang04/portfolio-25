@@ -13,25 +13,24 @@ import persnerweb from "../assets/images/project/PersonalFinance-web.png";
 const projects = [
   {
     name: "PersonalFinance App",
-    period: "2022-08-01 ~ 2023-04-01",
-    description: "이 앱은 5페이지(개요, 거래 내역, 예산, 팟, 정기 청구서)로 구성된 개인 금융 관리 앱입니다.",
+    period: "2025-01-23 ~ 2025-02-10",
+    description: "이 앱은 5페이지(개요, 거래 내역, 예산, 팟, 정기 청구서)로 구성된 개인 금융 관리 앱",
     images: {
       web: persnerweb,
       mobile: persnerapp,
       tablet: persnerTablet,
     },
     roles: [
-      "거래 검색, 정렬 및 필터링",
-      "예산 및 저장 포트 CRUD 기능",
-      "정기 청구서 상태 확인",
-      "정기 청구서 검색 및 정렬",
+      "저축 통장(Pots) 예산 및 저장 포트 CRUD 기능",
+      "정기 청구서(Recurring Bills) 상태 확인",
+      "정기 청구서(Recurring Bills) 검색 및 정렬",
       "반응형 UI 설계 및 개발",
     ],
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["HTML", "CSS", "JavaScript","React"],
   },
   {
-    name: "Cart App",
-    period: "2021-05-01 ~ 2021-12-01",
+    name: "Product list with cart",
+    period: "2025-02-27 ~ 2025-03-12",
     description: "장바구니가 포함된 온라인 제품 목록 애플리케이션입니다.",
     images: {
       web: cartApp,
@@ -46,12 +45,12 @@ const projects = [
       "키보드 전용 내비게이션 지원",
       "반응형 UI 및 접근성 구현",
     ],
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["HTML", "CSS", "JavaScript","React"],
   },
   {
     name: "Entertainment Web App",
-    period: "2022-03-01 ~ 2022-10-01",
-    description: "영화, TV 시리즈 탐색 및 북마크 기능을 제공하는 엔터테인먼트 웹 앱입니다.",
+    period: "2025-01-23 ~ 2025-02-10",
+    description: "영화, TV 시리즈 탐색 및 북마크 기능을 제공하는 엔터테인먼트 웹 앱",
     images: {
       web: enterweb,
       mobile: enterApp,
@@ -62,12 +61,12 @@ const projects = [
       "전역 검색 기능 구현",
       "반응형 레이아웃 설계",
     ],
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["HTML", "CSS", "JavaScript","React"],
   },
   {
     name: "Crowdfunding Product Page",
-    period: "2021-07-01 ~ 2021-12-01",
-    description: "크라우드 펀딩 제품 페이지로, 사용자가 후원(pledge)을 선택하고 진행 상황을 실시간으로 확인할 수 있는 웹 앱입니다.",
+    period: "2025-02-10 ~ 2025-02-19",
+    description: "크라우드 펀딩 제품 페이지로, 사용자가 후원(pledge)을 선택하고 진행 상황을 실시간으로 확인할 수 있는 웹 앱",
     images: {
       web: crowdweb,
       mobile: crowdapp,
@@ -80,15 +79,11 @@ const projects = [
       "반응형 UI 설계 (디바이스별 최적화)",
       "인터랙티브 요소 hover/focus 상태 구현",
     ],
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-    ],
+    skills: ["HTML", "CSS", "JavaScript","React"],
   },
   {
     name: "Agency Landing Page",
-    period: "2021-11-01 ~ 2022-02-01",
+    period: "2025-06-17 ~ 2025-06-23",
     description: "대행사 랜딩 페이지 웹사이트 프로젝트입니다.",
     images: {
       web: sunnysweb,
@@ -98,7 +93,7 @@ const projects = [
       "반응형 웹 구현",
       "레이아웃 최적화 및 접근성 개선",
     ],
-    skills: ["HTML", "CSS", "JavaScript"],
+    skills: ["HTML", "CSS", "JavaScript","React"],
   },
 ];
 
