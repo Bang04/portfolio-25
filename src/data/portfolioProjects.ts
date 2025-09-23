@@ -56,11 +56,11 @@ const projects = [
     },
     functions : ["장바구니에 항목 추가/제거", "상품 수량 증가 및 감소 기능","주문 확인 모달 구현"],
     roles: [
-      "장바구니 버튼 클릭 시 Redux/State를 활용해 항목 추가/삭제 구현",
-      "수량 변경시 실시간으로 UI 업데이트",
+      "장바구니 버튼 클릭 시 Redux/State 액션을 활용해 항목 추가,삭제 구현",
+      "장바구니 수량 변경시  Redux/State 기반으로 실시간 UI 반영",
       "반응형 UI 구현",
     ],
-    skills: ["HTML", "CSS", "JavaScript","React","Redux","Bulma"],
+    skills: ["HTML", "CSS", "JavaScript","React","Redux","TypeScript","Bulma"],
   },
   {
     name: "Entertainment Web App",
@@ -73,9 +73,9 @@ const projects = [
     },
     functions : ["홈, 영화, TV 시리즈 메인 화면 반응형 설계",  "북마크 추가 및 제거"],
     roles: [
-      "외부 라이브러리 없이 State와 Ref를 활용해 슬라이드 기능 구현",
-      "메인 화면 반응형 레이아웃 구현",
+      "라이브러리 없이 State와 Ref를 활용해 슬라이드 기능 구현",
       "Redux 상태관리로 북마크 리스트를 관리하고 dispatch 액션을 통해 추가 및 삭제 기능 구현",
+      "메인 화면 반응형 레이아웃 구현",
     ],
     skills: ["HTML", "CSS", "JavaScript","React","React","TypeScript"],
   },
@@ -93,7 +93,7 @@ const projects = [
       "Redux 상태 관리하여 후원 시 진행률·모금액·후원자 수 실시간 반영 구현",
       "dispatch 액션 북마크 토글 기능 구현",
       "모바일 뷰에서 햄버거 메뉴 버튼 클릭시 토글(열림/닫힘) 기능 구현",
-      "반응형 UI 설계 (디바이스별 최적화)",
+      "디바이스별 반응형 최적화",
     ],
     skills: ["HTML", "CSS", "JavaScript","React","React","Bulma"],
   },
@@ -109,7 +109,7 @@ const projects = [
     roles: [
       "랜딩 페이지 UI/UX 퍼블리싱 및 반응형 웹 구현",
     ],
-    skills: ["HTML", "CSS", "JavaScript", "React"],
+    skills: ["HTML", "CSS", "JavaScript", "React","Tailwind"],
   },
 ];
 
