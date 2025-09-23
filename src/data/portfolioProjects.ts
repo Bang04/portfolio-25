@@ -1,99 +1,115 @@
-import enterweb from "../assets/images/project/Enterainment-web.png";
+import enterWeb from "../assets/images/project/Enterainment-web.png";
 import enterApp from "../assets/images/project/Enterainment-app.png";
 import cartWeb from "../assets/images/project/LlistWithCart-app.png";
 import cartApp from "../assets/images/project/LlistWithCart-web.png";
 import cartTablet from "../assets/images/project/LlistWithCart-tablet.png";
-import crowdweb from "../assets/images/project/Crowdfunding-web.png";
-import crowdapp from "../assets/images/project/Crowdfunding-app.png";
-import sunnysweb from "../assets/images/project/Sunnyside-web.png";
-import persnerapp from "../assets/images/project/PersonalFinance-app.png";
+import crowdWeb from "../assets/images/project/Crowdfunding-web.png";
+import crowdApp from "../assets/images/project/Crowdfunding-app.png";
+import sunnysWeb from "../assets/images/project/Sunnyside-web.png";
+import persnerApp from "../assets/images/project/PersonalFinance-app.png";
 import persnerTablet from "../assets/images/project/PersonalFinance-tablet.png";
-import persnerweb from "../assets/images/project/PersonalFinance-web.png";
+import persnerWeb from "../assets/images/project/PersonalFinance-web.png";
+
+import potWeb from "../assets/images/project/personal/pot-web.png";
+import potTablet from "../assets/images/project/personal/pot-web.png";
+import add from "../assets/images/project/personal/pot-add.png";
+import del from "../assets/images/project/personal/pot-del.png";
+import edit from "../assets/images/project/personal/pot-edit.png";
+
+
+import RecurringWeb from "../assets/images/project/personal/recurring-web.png";
+import RecurringTablet from "../assets/images/project/personal/recurring-tablet.png";
+import RecurringApp from "../assets/images/project/personal/recurring-app.png";
+
 
 const projects = [
   {
     name: "PersonalFinance App",
+    type: "team",
     period: "2025-01-23 ~ 2025-02-10",
-    description: "이 앱은 5페이지(개요, 거래 내역, 예산, 팟, 정기 청구서)로 구성된 개인 금융 관리 앱",
+    description: "거래 내역, 예산 관리, 정기 청구서로 구성된 개인 금융 관리 웹 앱",
     images: {
-      web: persnerweb,
-      mobile: persnerapp,
-      tablet: persnerTablet,
+      web: potWeb,
+      mobile: RecurringTablet,
+      tablet: RecurringApp,
     },
+    detailImages : [ potWeb, potTablet,add, edit, del, RecurringWeb ,RecurringTablet, RecurringApp],
+    functions : ["저축 통장 예산 생성,조회,수정,삭제" , "정기 청구서 리스트, 검색 및 정렬 기능"] , 
     roles: [
-      "저축 통장(Pots) 예산 및 저장 포트 CRUD 기능",
-      "정기 청구서(Recurring Bills) 상태 확인",
-      "정기 청구서(Recurring Bills) 검색 및 정렬",
-      "반응형 UI 설계 및 개발",
+      "Redux 액션 기반으로 Pot의 CRUD(생성, 수정 등) 기능을 구현, 팀 리팩토링 이후 Firebase 연동 및 공통 모듈로 통합",
+      "Custom React Hook을 활용해 수정/삭제 버튼이 포함된 Toast 알림 기능 구현",
+      "Intersection Observer API 활용해 정기 청구서 리스트 무한스크롤 기능 추가",
+      "공통 모듈 기반으로 정기 청구서 검색 및 정렬 연동 및 구현",
+      "각 페이지 디바이스 별 반응형 UI 구현",
     ],
-    skills: ["HTML", "CSS", "JavaScript","React"],
+    skills: ["HTML", "CSS", "JavaScript","React","Redux","Tailwind"],
   },
   {
     name: "Product list with cart",
+    type: "personal",
     period: "2025-02-27 ~ 2025-03-12",
-    description: "장바구니가 포함된 온라인 제품 목록 애플리케이션입니다.",
+    description: "장바구니가 포함된 온라인 제품 목록 웹 앱",
     images: {
       web: cartApp,
       mobile: cartWeb,
       tablet: cartTablet,
     },
+    functions : ["장바구니에 항목 추가/제거", "상품 수량 증가 및 감소 기능","주문 확인 모달 구현"],
     roles: [
-      "장바구니에 항목 추가/제거",
-      "수량 증가 및 감소 기능",
-      "주문 확인 모달 구현",
-      "새로운 주문 초기화 기능",
-      "키보드 전용 내비게이션 지원",
-      "반응형 UI 및 접근성 구현",
+      "장바구니 버튼 클릭 시 Redux/State를 활용해 항목 추가/삭제 구현",
+      "수량 변경시 실시간으로 UI 업데이트",
+      "반응형 UI 구현",
     ],
-    skills: ["HTML", "CSS", "JavaScript","React"],
+    skills: ["HTML", "CSS", "JavaScript","React","Redux","Bulma"],
   },
   {
     name: "Entertainment Web App",
+    type: "team",
     period: "2025-01-23 ~ 2025-02-10",
     description: "영화, TV 시리즈 탐색 및 북마크 기능을 제공하는 엔터테인먼트 웹 앱",
     images: {
-      web: enterweb,
+      web: enterWeb,
       mobile: enterApp,
     },
+    functions : ["홈, 영화, TV 시리즈 메인 화면 반응형 설계",  "북마크 추가 및 제거"],
     roles: [
-      "홈, 영화, TV 시리즈, 북마크 페이지 구현",
-      "북마크 추가 및 제거",
-      "전역 검색 기능 구현",
-      "반응형 레이아웃 설계",
+      "외부 라이브러리 없이 State와 Ref를 활용해 슬라이드 기능 구현",
+      "메인 화면 반응형 레이아웃 구현",
+      "Redux 상태관리로 북마크 리스트를 관리하고 dispatch 액션을 통해 추가 및 삭제 기능 구현",
     ],
-    skills: ["HTML", "CSS", "JavaScript","React"],
+    skills: ["HTML", "CSS", "JavaScript","React","React","TypeScript"],
   },
   {
     name: "Crowdfunding Product Page",
+     type: "team",
     period: "2025-02-10 ~ 2025-02-19",
     description: "크라우드 펀딩 제품 페이지로, 사용자가 후원(pledge)을 선택하고 진행 상황을 실시간으로 확인할 수 있는 웹 앱",
     images: {
-      web: crowdweb,
-      mobile: crowdapp,
+      web: crowdWeb,
+      mobile: crowdApp,
     },
+    functions : ["후원 플랜 선택 및 확인 기능","후원 시 진행률·모금액·후원자 수 실시간 반영", "북마크 토글 기능 구현",],
     roles: [
-      "후원 플랜 선택 및 확인 기능",
-      "후원 시 진행바(progress bar) 및 총 모금액 실시간 업데이트",
-      "총 후원자(backers) 수 증가 기능",
-      "북마크 토글 기능 구현",
+      "Redux 상태 관리하여 후원 시 진행률·모금액·후원자 수 실시간 반영 구현",
+      "dispatch 액션 북마크 토글 기능 구현",
+      "모바일 뷰에서 햄버거 메뉴 버튼 클릭시 토글(열림/닫힘) 기능 구현",
       "반응형 UI 설계 (디바이스별 최적화)",
-      "인터랙티브 요소 hover/focus 상태 구현",
     ],
-    skills: ["HTML", "CSS", "JavaScript","React"],
+    skills: ["HTML", "CSS", "JavaScript","React","React","Bulma"],
   },
   {
     name: "Agency Landing Page",
+     type: "personal",
     period: "2025-06-17 ~ 2025-06-23",
-    description: "대행사 랜딩 페이지 웹사이트 프로젝트입니다.",
+    description: "대행사 랜딩 반응형 웹 페이지.",
     images: {
-      web: sunnysweb,
+      web: sunnysWeb,
     },
+    functions : [ "랜딩 페이지 UI/UX 디자인","반응형 웹 구현",],
     roles: [
-      "랜딩 페이지 UI/UX 디자인",
-      "반응형 웹 구현",
-      "레이아웃 최적화 및 접근성 개선",
+      "랜딩 페이지 UI/UX 퍼블리싱 및 반응형 웹 구현",
     ],
-    skills: ["HTML", "CSS", "JavaScript","React"],
+    skills: ["HTML", "CSS", "JavaScript", "React"],
   },
 ];
 
