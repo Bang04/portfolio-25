@@ -43,6 +43,10 @@ const projects = [
       "각 페이지 디바이스 별 반응형 UI 구현",
     ],
     skills: ["HTML", "CSS", "JavaScript","React","Redux","Tailwind"],
+    links: { 
+      demo: "",   // 배포 사이트
+      github: "https://github.com/Bang04/frontend-mentor-challenges/tree/b6b7812cf3b339931a81d192c73b989b73ff100a/personal-finance-app"
+    }
   },
   {
     name: "Product list with cart",
@@ -61,6 +65,10 @@ const projects = [
       "반응형 UI 구현",
     ],
     skills: ["HTML", "CSS", "JavaScript","React","Redux","TypeScript","Bulma"],
+    links: { 
+      demo: "",   // 배포 사이트
+      github: "https://github.com/Bang04/frontend-mentor-solo/tree/a8f24fc04ac8e7788a8ec5fb985f1f430d8d54ac/product-list-with-cart-main"
+    }
   },
   {
     name: "Entertainment Web App",
@@ -78,6 +86,10 @@ const projects = [
       "메인 화면 반응형 레이아웃 구현",
     ],
     skills: ["HTML", "CSS", "JavaScript","React","React","TypeScript"],
+    links: { 
+      demo: "",   // 배포 사이트
+      github: "https://github.com/Bang04/frontend-mentor-challenges/tree/b6b7812cf3b339931a81d192c73b989b73ff100a/entertainment-webapp"
+    }
   },
   {
     name: "Crowdfunding Product Page",
@@ -96,6 +108,10 @@ const projects = [
       "디바이스별 반응형 최적화",
     ],
     skills: ["HTML", "CSS", "JavaScript","React","React","Bulma"],
+    links: { 
+      demo: "",   // 배포 사이트
+      github: "https://github.com/Bang04/frontend-mentor-challenges/tree/b6b7812cf3b339931a81d192c73b989b73ff100a/crowdfunding-product-page"
+    }
   },
   {
     name: "Agency Landing Page",
@@ -110,6 +126,10 @@ const projects = [
       "랜딩 페이지 UI/UX 퍼블리싱 및 반응형 웹 구현",
     ],
     skills: ["HTML", "CSS", "JavaScript", "React","Tailwind"],
+    links: { 
+      demo: "",   // 배포 사이트
+      github: "https://github.com/Bang04/frontend-mentor-solo/tree/a8f24fc04ac8e7788a8ec5fb985f1f430d8d54ac/sunnyside-agency-landing-page"
+    }
   },
 ];
 

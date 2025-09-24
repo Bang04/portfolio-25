@@ -3,7 +3,7 @@ export const CareerInfo = () => {
     return (
         <>
            <div className="w-4/5 mx-auto p-3 text-lg text-left font-bold">💼 경력</div>
-                <div className="flex flex-col  max-w-5/6 justify-evenly md:flex-row gap-4 w-full mb-20">
+                <div className="flex flex-col  max-w-4/5 justify-evenly md:flex-row gap-4 w-full mb-20">
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
                         animate={{ opacity: 1, scale: 1 }}

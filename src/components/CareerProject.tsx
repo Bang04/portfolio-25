@@ -10,9 +10,9 @@ export const CareerProject = () => {
 
     return (
         <div className="flex flex-col items-center">
-            <div className="flex flex-col mb-20">
-                <div className="w-4/5 mx-auto p-3 text-lg text-left font-bold">🚀 주요성과</div>
-                <div className="flex flex-col gap-10">
+            <div className="flex flex-col mb-20 w-4/5">
+                <div className="w-full mx-auto p-3 text-lg text-left font-bold">🚀 주요성과</div>
+                <div className="w-full mx-auto flex flex-col gap-10">
                     {careerProjects.map((project, i: number) => {
                         return (
                             <motion.div
@@ -31,7 +31,7 @@ export const CareerProject = () => {
                                 initial={{ opacity: 0, y: 0 }}
                                 animate={{ opacity: 1, y: 0 }}  // 스크롤 들어올 때만 애니메이션 실행
                                 transition={{ duration: 0.6, ease: "easeOut" }}
-                                className="relative flex flex-col md:flex-row w-5/6 m-auto rounded-2xl shadow-lg bg-white"
+                                className="relative flex flex-col md:flex-row rounded-2xl shadow-lg bg-white"
                             >
                                 {/* 이미지 영역 */}
                                 <ImageSlide images={project.image} mode={project.mode} />
@@ -84,8 +84,6 @@ export const CareerProject = () => {
                                         </div>
                                     </motion.div>
                                 </motion.div>
-
-
                             </motion.div>
                         )
                     })
