@@ -6,8 +6,8 @@ import cartTablet from "../assets/images/project/LlistWithCart-tablet.png";
 import crowdWeb from "../assets/images/project/Crowdfunding-web.png";
 import crowdApp from "../assets/images/project/Crowdfunding-app.png";
 import sunnysWeb from "../assets/images/project/Sunnyside-web.png";
-import persnerApp from "../assets/images/project/PersonalFinance-app.png";
-import persnerTablet from "../assets/images/project/PersonalFinance-tablet.png";
+// import persnerApp from "../assets/images/project/PersonalFinance-app.png";
+// import persnerTablet from "../assets/images/project/PersonalFinance-tablet.png";
 import persnerWeb from "../assets/images/project/PersonalFinance-web.png";
 
 import potWeb from "../assets/images/project/personal/pot-web.png";
@@ -16,11 +16,9 @@ import add from "../assets/images/project/personal/pot-add.png";
 import del from "../assets/images/project/personal/pot-del.png";
 import edit from "../assets/images/project/personal/pot-edit.png";
 
-
 import RecurringWeb from "../assets/images/project/personal/recurring-web.png";
 import RecurringTablet from "../assets/images/project/personal/recurring-tablet.png";
 import RecurringApp from "../assets/images/project/personal/recurring-app.png";
-
 
 const projects = [
   {
@@ -30,10 +28,10 @@ const projects = [
     description: "거래 내역, 예산 관리, 정기 청구서로 구성된 개인 금융 관리 웹 앱",
     images: {
       web: potWeb,
-      mobile: RecurringTablet,
-      tablet: RecurringApp,
+      tablet: RecurringTablet,
+      mobile: RecurringApp,
     },
-    detailImages : [ potWeb, potTablet,add, edit, del, RecurringWeb ,RecurringTablet, RecurringApp],
+    detailImages : [ persnerWeb, potWeb, potTablet,add, edit, del, RecurringWeb ,RecurringTablet, RecurringApp],
     functions : ["저축 통장 예산 생성,조회,수정,삭제" , "정기 청구서 리스트, 검색 및 정렬 기능"] , 
     roles: [
       "Redux 액션 기반으로 Pot의 CRUD(생성, 수정 등) 기능을 구현, 팀 리팩토링 이후 Firebase 연동 및 공통 모듈로 통합",
@@ -44,7 +42,7 @@ const projects = [
     ],
     skills: ["HTML", "CSS", "JavaScript","React","Redux","Tailwind"],
     links: { 
-      demo: "",   // 배포 사이트
+      demo: "https://toy-personal-finance.web.app/",   // 배포 사이트
       github: "https://github.com/Bang04/frontend-mentor-challenges/tree/b6b7812cf3b339931a81d192c73b989b73ff100a/personal-finance-app"
     }
   },
@@ -54,9 +52,9 @@ const projects = [
     period: "2025-02-27 ~ 2025-03-12",
     description: "장바구니가 포함된 온라인 제품 목록 웹 앱",
     images: {
-      web: cartApp,
-      mobile: cartWeb,
+      web: cartWeb,
       tablet: cartTablet,
+      mobile: cartApp,
     },
     functions : ["장바구니에 항목 추가/제거", "상품 수량 증가 및 감소 기능","주문 확인 모달 구현"],
     roles: [
@@ -66,7 +64,7 @@ const projects = [
     ],
     skills: ["HTML", "CSS", "JavaScript","React","Redux","TypeScript","Bulma"],
     links: { 
-      demo: "",   // 배포 사이트
+      demo: null,   // 배포 사이트
       github: "https://github.com/Bang04/frontend-mentor-solo/tree/a8f24fc04ac8e7788a8ec5fb985f1f430d8d54ac/product-list-with-cart-main"
     }
   },
@@ -87,7 +85,7 @@ const projects = [
     ],
     skills: ["HTML", "CSS", "JavaScript","React","React","TypeScript"],
     links: { 
-      demo: "",   // 배포 사이트
+      demo: null,   // 배포 사이트
       github: "https://github.com/Bang04/frontend-mentor-challenges/tree/b6b7812cf3b339931a81d192c73b989b73ff100a/entertainment-webapp"
     }
   },
@@ -109,7 +107,7 @@ const projects = [
     ],
     skills: ["HTML", "CSS", "JavaScript","React","React","Bulma"],
     links: { 
-      demo: "",   // 배포 사이트
+      demo: null,   // 배포 사이트
       github: "https://github.com/Bang04/frontend-mentor-challenges/tree/b6b7812cf3b339931a81d192c73b989b73ff100a/crowdfunding-product-page"
     }
   },
@@ -127,7 +125,7 @@ const projects = [
     ],
     skills: ["HTML", "CSS", "JavaScript", "React","Tailwind"],
     links: { 
-      demo: "",   // 배포 사이트
+      demo: null,   // 배포 사이트
       github: "https://github.com/Bang04/frontend-mentor-solo/tree/a8f24fc04ac8e7788a8ec5fb985f1f430d8d54ac/sunnyside-agency-landing-page"
     }
   },

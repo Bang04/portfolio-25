@@ -6,13 +6,13 @@ type SlideProps = {
     images: string[];
 }
 
-export const FanCard = ({ images }: SlideProps) => {
+export const FanCard = ( { images }: SlideProps ) => {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-50px" });
-
+ 
     return (
-        <div className="flex md:w-3/5">
-            <AnimatePresence initial={false}>
+        <AnimatePresence initial={false}>
+            <div className="flex flex-col">
                 <div ref={ref} className="flex justify-center items-center w-full">
                     {images && images.map((src, idx) => {
                         let rotate = 0;
@@ -43,8 +43,8 @@ export const FanCard = ({ images }: SlideProps) => {
                         )
                     })}
                 </div>
-            </AnimatePresence>
-        </div>
+            </div>
+        </AnimatePresence>
     )
 }
 
