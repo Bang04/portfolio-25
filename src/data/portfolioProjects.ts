@@ -64,7 +64,7 @@ const projects = [
     ],
     skills: ["HTML", "CSS", "JavaScript","React","Redux","TypeScript","Bulma"],
     links: { 
-      demo: null,   // 배포 사이트
+      demo: "https://b-dessert.vercel.app/",   // 배포 사이트
       github: "https://github.com/Bang04/frontend-mentor-solo/tree/a8f24fc04ac8e7788a8ec5fb985f1f430d8d54ac/product-list-with-cart-main"
     }
   },
