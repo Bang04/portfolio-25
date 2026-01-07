@@ -4,7 +4,7 @@ export const CareerInfo = () => {
       <div className="mx-auto mb-20 w-full max-w-screen-lg px-4">
             <h2 className="text-xl font-bold mb-6">💼 경력 & 프로젝트</h2>         
             
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <motion.div
                     initial={{ opacity: 0, scale: 0 }}
                     animate={{ opacity: 1, scale: 1 }}

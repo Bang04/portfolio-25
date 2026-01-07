@@ -3,7 +3,7 @@ import { CareerProject } from "../ui/CareerProject";
 export const About = () => {
 
     return (
-        <div className="flex flex-col items-center bg-blue-100 py-16">
+        <div className="flex flex-col items-center py-16">
             <CareerInfo />
             <CareerProject />
         </div>

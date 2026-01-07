@@ -37,17 +37,57 @@ const App = () => {
 
   return (
     <>
-      <header>
-        <Navbar handlerSection={handlerSection} />
+      {/* Header */}
+      <header className="w-full bg-white border-b sticky top-0 z-50">
+        <div className="max-w-screen-lg mx-auto px-4 h-16 flex items-center">
+          <Navbar handlerSection={handlerSection} />
+        </div>
       </header>
-      <main>
-        <section className="w-full max-w-screen-lg mx-auto px-4"><Home /></section>
-        <section ref={about} className="w-full max-w-screen-lg mx-auto px-4"><About /></section>
-        <section ref={project} className="w-full max-w-screen-lg mx-auto px-4"><Project /></section>
-        <section ref={skill} className="w-full max-w-screen-lg mx-auto px-4"><Skill /></section>
-        <section ref={contact} className="w-full max-w-screen-lg mx-auto px-4"><Contact /></section>
+
+
+      <main className="w-full">
+
+        {/* Home */}
+        <section className="w-full bg-white">
+          <div className="max-w-screen-lg mx-auto px-4 py-24">
+            <Home />
+          </div>
+        </section>
+
+        {/* About */}
+        <section className="w-full bg-gray-50">
+          <div className="max-w-screen-lg mx-auto px-4 py-24">
+            <About />
+          </div>
+        </section>
+
+        {/* Project */}
+        <section className="w-full bg-gradient-to-b from-white to-gray-50">
+          <div className="max-w-screen-lg mx-auto px-4 py-24">
+            <Project />
+          </div>
+        </section>
+
+        {/* Skill */}
+        <section className="w-full bg-white">
+          <div className="max-w-screen-lg mx-auto px-4 py-24">
+            <Skill />
+          </div>
+        </section>
+
+        {/* Contact */}
+        <section className="w-full bg-gray-50">
+          <div className="max-w-screen-lg mx-auto px-4 py-24">
+            <Contact />
+          </div>
+        </section>
       </main>
-      <Footer />
+
+      <footer className="w-full bg-gray-900 text-gray-200">
+        <div className="max-w-screen-lg mx-auto px-4 py-16">
+          <Footer />
+        </div>
+      </footer>
     </>
   )
 }

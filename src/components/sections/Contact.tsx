@@ -108,7 +108,7 @@ export const Contact = () => {
   };
 
   return (
-    <div className='bg-blue-100 py-16'>
+    <div className='py-16'>
        <div className="w-4/5 mx-auto p-3 text-lg text-left font-bold">✉️ Contact</div>
      
       <div className="flex flex-wrap max-w-4/5 m-auto gap-y-15">

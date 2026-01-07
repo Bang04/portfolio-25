@@ -7,7 +7,7 @@ import { ProjectType } from "../ui/ProjectType";
 
 export const Project = () => {
   return (
-    <div className="flex flex-col items-center bg-green-100 py-16">
+    <div className="flex flex-col items-center py-16">
       <div className="w-4/5 mx-auto p-3 text-lg text-left font-bold">📦Project</div>
       <div className="flex flex-wrap max-w-4/5 gap-y-15">
         {

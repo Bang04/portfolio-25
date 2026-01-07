@@ -1,7 +1,10 @@
 export const Footer = () => {
     return (
-        <footer className="min-h-30 text-white bg-[#31302f]">
-            <p>© 2025 [ EunKyeong ]. Designed & Developed by me.</p>
-        </footer>
+        <footer className="w-full bg-gray-900 text-gray-300">
+  <div className="max-w-screen-lg mx-auto px-4 py-10 text-center text-sm">
+    © 2026 <span className="text-white font-medium">EunKyeong</span>. Designed & Developed by me.
+  </div>
+</footer>
+
     );
 };

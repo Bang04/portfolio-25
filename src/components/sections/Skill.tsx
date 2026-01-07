@@ -8,7 +8,7 @@ export const Skill = () => {
     const isInView = useInView(ref, { once: true, margin: "-50px" });
 
     return (
-        <div className="flex flex-col items-center min-h-100  bg-[#ffece9] py-16">
+        <div className="flex flex-col items-center min-h-100  py-16">
             <div className="w-4/5 mx-auto p-3 text-lg text-left font-bold">🛠️ Skills</div>
             <div ref={ref} className="flex flex-col md:flex-row  justify-between w-full rounded-xl shadow-lg bg-white max-w-4/5">
                 <div className="p-4">
