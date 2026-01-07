@@ -55,28 +55,28 @@ const App = () => {
         </section>
 
         {/* About */}
-        <section className="w-full bg-gray-50">
+        <section  ref={about}  className="w-full bg-gray-50">
           <div className="max-w-screen-lg mx-auto px-4 py-24">
             <About />
           </div>
         </section>
 
         {/* Project */}
-        <section className="w-full bg-gradient-to-b from-white to-gray-50">
+        <section  ref={project}  className="w-full bg-gradient-to-b from-white to-gray-50">
           <div className="max-w-screen-lg mx-auto px-4 py-24">
             <Project />
           </div>
         </section>
 
         {/* Skill */}
-        <section className="w-full bg-white">
+        <section ref={skill} className="w-full bg-white">
           <div className="max-w-screen-lg mx-auto px-4 py-24">
             <Skill />
           </div>
         </section>
 
         {/* Contact */}
-        <section className="w-full bg-gray-50">
+        <section ref={contact} className="w-full bg-gray-50">
           <div className="max-w-screen-lg mx-auto px-4 py-24">
             <Contact />
           </div>
