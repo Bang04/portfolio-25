@@ -1,2 +1,11 @@
 @import "tailwindcss";
 @import "swiper/css";
+
+html, body {
+  overflow-x: hidden;
+}
+@layer components {
+  .card-box {
+    @apply rounded-2xl p-6 bg-white shadow-md border border-gray-100;
+  }
+}

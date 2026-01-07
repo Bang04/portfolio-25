@@ -5,10 +5,10 @@ const Navbar = ({ handlerSection }: any) => {
 
     useEffect(() => {
         const handlerScroll = () => {
-          //  setIsSticky(window.scrollY > 40);
-            if(window.scrollY > 50){
+            //  setIsSticky(window.scrollY > 40);
+            if (window.scrollY > 50) {
                 setIsSticky(true);
-            }else if(window.scrollY < 40){
+            } else if (window.scrollY < 40) {
                 setIsSticky(false);
             }
         }
@@ -20,9 +20,11 @@ const Navbar = ({ handlerSection }: any) => {
     }, []);
 
     return (
-        <header 
-        className={`w-full bg-white/40 shadow-md z-50 ${isSticky ? 'fixed' : 'sticky'}`}>
-            <div className="flex justify-between items-center w-full mx-auto py-4 px-4 md:px-8">
+        <header
+            className={`top-0 left-0 w-full z-50 h-16 border-b backdrop-blur bg-white/60 transition-all
+  ${isSticky ? 'fixed shadow-md' : 'sticky shadow-sm'}`}
+        >
+            <div className="layout flex justify-between items-center h-16 px-4">
                 <h1 className="text-2xl font-bold">BEK</h1>
                 <nav className="space-x-4">
                     <button onClick={() => handlerSection("about")} >About</button>

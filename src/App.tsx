@@ -1,14 +1,14 @@
 import { useRef } from "react";
-import { Home } from "./layout/Home";
-import { About } from "./layout/About";
-import { Project } from "./layout/Project";
-import { Skill } from "./layout/Skill";
-import { Contact } from "./layout/Contact";
-import Navbar from "./layout/Nav";
-import { Footer } from "./layout/Footer";
+import { Home } from "./components/sections/Home";
+import { About } from "./components/sections/About";
+import { Project } from "./components/sections/Project";
+import { Skill } from "./components/sections/Skill";
+import { Contact } from "./components/sections/Contact";
+import Navbar from "./components/layout/Nav";
+import { Footer } from "./components/layout/Footer";
 
-interface Nav{
-  section :  "about" | "project" |"skill" | "contact"
+interface Nav {
+  section: "about" | "project" | "skill" | "contact"
 }
 
 const App = () => {
@@ -37,12 +37,16 @@ const App = () => {
 
   return (
     <>
-      <Navbar handlerSection = {handlerSection}/>
-      <Home />
-      <div ref={about}><About /></div>
-      <div ref={project}><Project /></div>
-      <div ref={skill}><Skill /></div>
-      <div ref={contact}><Contact /></div>
+      <header>
+        <Navbar handlerSection={handlerSection} />
+      </header>
+      <main>
+        <section className="w-full max-w-screen-lg mx-auto px-4"><Home /></section>
+        <section ref={about} className="w-full max-w-screen-lg mx-auto px-4"><About /></section>
+        <section ref={project} className="w-full max-w-screen-lg mx-auto px-4"><Project /></section>
+        <section ref={skill} className="w-full max-w-screen-lg mx-auto px-4"><Skill /></section>
+        <section ref={contact} className="w-full max-w-screen-lg mx-auto px-4"><Contact /></section>
+      </main>
       <Footer />
     </>
   )

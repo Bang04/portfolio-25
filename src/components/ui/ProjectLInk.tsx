@@ -1,5 +1,5 @@
-import git from "../assets/images/skill/github.svg";
-import link from "../assets/images/skill/link.svg";
+import git from "../../assets/images/skill/github.svg";
+import link from "../../assets/images/skill/link.svg";
 
 export const ProjectLink = (props: any) => {
     const demoLink = props.links.demo;

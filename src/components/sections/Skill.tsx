@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { SkillTag } from "../components/SkillTag";
-import skills from "../data/skills";
+import { SkillTag } from "../ui/SkillTag";
+import skills from "../../data/skills";
 
 export const Skill = () => {
     const ref = useRef(null);

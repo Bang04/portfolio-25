@@ -1,5 +1,5 @@
-import { CareerInfo } from "../components/CareerInfo";
-import { CareerProject } from "../components/CareerProject";
+import { CareerInfo } from "../ui/CareerInfo";
+import { CareerProject } from "../ui/CareerProject";
 export const About = () => {
 
     return (

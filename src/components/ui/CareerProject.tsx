@@ -1,9 +1,9 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { SkillTag } from "../components/SkillTag";
+import { SkillTag } from "../ui/SkillTag";
 import { ImageSlide } from "./ImageSlide";
-import careerProjects from "../data/careerProjects";
+import careerProjects from "../../data/careerProjects";
 
 export const CareerProject = () => {
     const [hovered, setHovered] = useState<boolean[]>(() => careerProjects.map(() => false));

@@ -1,8 +1,8 @@
-import { SkillTag } from "../components/SkillTag";
-import { FanCard } from "../components/FanCard";
-import projects from "../data/portfolioProjects";
-import { ProjectLink } from "../components/ProjectLInk";
-import { ProjectType } from "../components/ProjectType";
+import { SkillTag } from "../ui/SkillTag";
+import { FanCard } from "../ui/FanCard";
+import projects from "../../data/portfolioProjects";
+import { ProjectLink } from "../ui/ProjectLInk";
+import { ProjectType } from "../ui/ProjectType";
 
 
 export const Project = () => {
